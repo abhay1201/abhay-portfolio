@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills — Abhay Kumar</title>
+  <link rel="stylesheet" href="../styles.css"/>
+  <style>
+    /* Skill bar styles */
+    .skill-bar-row {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 12px;
+    }
+    .skill-bar-label {
+      width: 110px; flex-shrink: 0;
+      font-size: 12.5px; font-weight: 600;
+      color: rgb(0 0 0 / 50%);
+    }
+    .skill-bar-track {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,.18);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .skill-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #4f9eff, #a0d4ff);
+      border-radius: 4px;
+      width: 0;
+      transition: width 1.2s cubic-bezier(.4,0,.2,1);
+    }
+    .skill-bar-pct {
+      width: 34px; text-align: right;
+      font-size: 11px; color: rgb(0 0 0 / 50%);
+      font-weight: 500;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="bg">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+    <div class="cloud c5"></div>
+    <div class="cloud c6"></div>
+  </div>
+
+  <div id="header">
+    <a class="back-btn" href="../index.html" title="Home">&#8592;</a>
+    <h1>Skills</h1>
+    <a class="contact-btn" href="mailto:abhay_k@ee.iitr.ac.in">✉ Contact Me</a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="page-inner">
+
+      <a class="page-back" href="../index.html">&#8592; &nbsp;Back to Home</a>
+
+      <p class="page-title">Skills</p>
+      <p class="page-subtitle">My Technical Toolkit</p>
+
+      <div class="cards-grid single">
+
+        <!-- Languages -->
+        <div class="card">
+          <div class="skills-section">
+            <h3>🖥️ Languages</h3>
+            <div class="skill-bar-row">
+              <span class="skill-bar-label">Python</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="92"></div></div>
+              <span class="skill-bar-pct">92%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span class="skill-bar-label">C++</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="80"></div></div>
+              <span class="skill-bar-pct">80%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span class="skill-bar-label">SQL</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="75"></div></div>
+              <span class="skill-bar-pct">75%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span class="skill-bar-label">JavaScript</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="70"></div></div>
+              <span class="skill-bar-pct">70%</span>
+            </div>
+            <div class="skill-bar-row">
+              <span class="skill-bar-label">HTML / CSS</span>
+              <div class="skill-bar-track"><div class="skill-bar-fill" data-w="78"></div></div>
+              <span class="skill-bar-pct">78%</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frameworks & Libraries -->
+        <div class="card">
+          <div class="skills-section">
+            <h3>⚙️ Frameworks &amp; Libraries</h3>
+            <span class="tag">LangChain</span>
+            <span class="tag">HuggingFace</span>
+            <span class="tag">Scikit-learn</span>
+            <span class="tag">PyTorch</span>
+            <span class="tag">React</span>
+            <span class="tag">Flask</span>
+            <span class="tag">Node.js</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">ChromaDB</span>
+            <span class="tag">NumPy</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Matplotlib</span>
+            <span class="tag">Scipy</span>
+            <span class="tag">WebSockets</span>
+          </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="card">
+          <div class="skills-section">
+            <h3>🛠️ Developer Tools</h3>
+            <span class="tag">VS Code</span>
+            <span class="tag">GitHub / Git</span>
+            <span class="tag">Jupyter Notebook</span>
+            <span class="tag">Google Colab</span>
+            <span class="tag">MATLAB</span>
+            <span class="tag">Postman</span>
+          </div>
+        </div>
+
+        <!-- Domain Knowledge -->
+        <div class="card">
+          <div class="skills-section">
+            <h3>🧠 Domain Knowledge</h3>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Natural Language Processing</span>
+            <span class="tag">Generative AI</span>
+            <span class="tag">RAG Architecture</span>
+            <span class="tag">LLMs</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Data Structures &amp; Algorithms</span>
+            <span class="tag">Statistics &amp; Probability</span>
+            <span class="tag">Power Systems &amp; EV</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+    /* Animate skill bars on page load */
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.querySelectorAll('.skill-bar-fill').forEach(bar => {
+          bar.style.width = bar.dataset.w + '%';
+        });
+      }, 300);
+    });
+  </script>
+</body>
+</html>

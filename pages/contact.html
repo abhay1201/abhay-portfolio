@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact — Abhay Kumar</title>
+  <link rel="stylesheet" href="../styles.css"/>
+  <style>
+    /* Contact form */
+    .contact-form-card {
+      background: var(--card-bg);
+      border: 1.5px solid var(--glass-border);
+      border-radius: 22px;
+      padding: 32px;
+      backdrop-filter: blur(16px);
+      box-shadow: var(--shadow-card);
+      margin-bottom: 22px;
+      animation: cardIn .5s cubic-bezier(.34,1.2,.64,1) .05s both;
+    }
+    .contact-form-card h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 18px; font-weight: 700;
+      color: rgb(0, 0, 0); margin-bottom: 20px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group label {
+      display: block;
+      font-size: 12px; font-weight: 600;
+      color: rgba(0, 0, 0, 0.86);
+      letter-spacing: .06em; text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,.15);
+      border: 1.5px solid rgba(255,255,255,.3);
+      border-radius: 12px;
+      padding: 12px 16px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: rgb(0, 0, 0);
+      outline: none;
+      transition: border-color .2s, background .2s;
+      resize: vertical;
+    }
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,.38); }
+    .form-group input:focus,
+    .form-group textarea:focus {
+      border-color: rgba(79,158,255,.7);
+      background: rgba(255,255,255,.22);
+    }
+    .form-group textarea { min-height: 110px; }
+
+    .form-success {
+      display: none;
+      background: rgba(34,197,94,.2);
+      border: 1.5px solid rgba(34,197,94,.45);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #86efac;
+      font-size: 14px;
+      margin-top: 14px;
+    }
+    .form-error {
+      display: none;
+      background: rgba(239,68,68,.2);
+      border: 1.5px solid rgba(239,68,68,.45);
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #fca5a5;
+      font-size: 14px;
+      margin-top: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="bg">
+    <div class="cloud c1"></div>
+    <div class="cloud c2"></div>
+    <div class="cloud c3"></div>
+    <div class="cloud c4"></div>
+    <div class="cloud c5"></div>
+    <div class="cloud c6"></div>
+  </div>
+
+  <div id="header">
+    <a class="back-btn" href="../index.html" title="Home">&#8592;</a>
+    <h1>Contact</h1>
+    <a class="contact-btn" href="mailto:abhay_k@ee.iitr.ac.in">✉ Contact Me</a>
+  </div>
+
+  <div class="page-wrapper">
+    <div class="page-inner">
+
+      <a class="page-back" href="../index.html">&#8592; &nbsp;Back to Home</a>
+
+      <p class="page-title">Contact</p>
+      <p class="page-subtitle">Let's connect</p>
+
+      <!-- DIRECT LINKS -->
+      <a class="contact-link" href="mailto:abhay_k@ee.iitr.ac.in" style="animation-delay:.04s">
+        <div class="cl-icon">✉️</div>
+        <div class="cl-info">
+          <strong>Email</strong>
+          <span>abhay_k@ee.iitr.ac.in</span>
+        </div>
+      </a>
+
+      <a class="contact-link" href="tel:+919507557433" style="animation-delay:.10s">
+        <div class="cl-icon">📞</div>
+        <div class="cl-info">
+          <strong>Phone</strong>
+          <span>+91-9507557433</span>
+        </div>
+      </a>
+
+      <!--
+        Replace the href values below with your actual profile URLs
+        Example: href="https://linkedin.com/in/your-username"
+      -->
+      <a class="contact-link" href="https://www.linkedin.com/in/abhay-kumar-968155218/" target="_blank" style="animation-delay:.16s">
+        <div class="cl-icon">💼</div>
+        <div class="cl-info">
+          <strong>LinkedIn</strong>
+        </div>
+      </a>
+
+      <a class="contact-link" href="https://github.com/abhay1201" target="_blank" style="animation-delay:.22s">
+        <div class="cl-icon">💻</div>
+        <div class="cl-info">
+          <strong>GitHub</strong>
+        </div>
+      </a>
+
+      <a class="contact-link" href="https://leetcode.com/u/abhayaditya327/" target="_blank" style="animation-delay:.28s">
+        <div class="cl-icon">⚡</div>
+        <div class="cl-info">
+          <strong>LeetCode</strong>
+        </div>
+      </a>
+
+      <a class="contact-link" href="https://codeforces.com/profile/IITian_AK" target="_blank" style="animation-delay:.34s">
+        <div class="cl-icon">🏆</div>
+        <div class="cl-info">
+          <strong>Codeforces</strong>
+          <span>Specialist · Peak Rating 1458</span>
+        </div>
+      </a>
+
+      <!-- QUICK MESSAGE FORM -->
+      <form class="contact-form-card" id="contactForm" style="margin-top:32px">
+        <h3>✉ Send a Quick Message</h3>
+        <div class="form-group">
+          <label>Your Name</label>
+          <input type="text" name="name" id="fname" placeholder="Jane Doe" required/>
+        </div>
+        <div class="form-group">
+          <label>Your Email</label>
+          <input type="email" name="email" id="femail" placeholder="jane@example.com" required/>
+        </div>
+        <div class="form-group">
+          <label>Message</label>
+          <textarea name="message" id="fmsg" placeholder="Hi Abhay, I'd love to connect about…" required></textarea>
+        </div>
+        <button class="btn-primary" type="submit" style="width:100%;justify-content:center">
+          Send Message ↗
+        </button>
+        <div class="form-success" id="successMsg">
+          ✅ Message sent successfully! I'll get back to you soon.
+        </div>
+        <div class="form-error" id="errorMsg" style="display:none; background: rgba(239,68,68,.2); border: 1.5px solid rgba(239,68,68,.45); border-radius: 12px; padding: 14px 18px; color: #fca5a5; font-size: 14px; margin-top: 14px;">
+          ❌ Failed to send message. Please try again or contact me directly.
+        </div>
+      </form>
+
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+    // Replace YOUR_FORMSPREE_URL with your actual Formspree endpoint
+    const FORMSPREE_URL = 'https://formspree.io/f/mjgpvrgj';
+
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const form = e.target;
+      const formData = new FormData(form);
+      const successMsg = document.getElementById('successMsg');
+      const errorMsg = document.getElementById('errorMsg');
+      const submitBtn = form.querySelector('button[type="submit"]');
+
+      // Hide messages and disable button
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const response = await fetch(FORMSPREE_URL, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        errorMsg.style.display = 'block';
+        console.error('Error:', error);
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message ↗';
+      }
+    });
+  </script>
+</body>
+</html>
